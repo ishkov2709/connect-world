@@ -1,26 +1,26 @@
-import 'react-native-get-random-values';
-import Home from './src/Screens/Home';
-import store from './src/store/store';
-import MapScreen from './src/Screens/MapScreen';
-import LoginScreen from './src/Screens/LoginScreen';
-import CommentsScreen from './src/Screens/CommentsScreen';
-import RegistrationScreen from './src/Screens/RegistrationScreen';
-import { Text } from 'react-native';
-import { Provider } from 'react-redux';
-import { useFonts } from 'expo-font';
-import { PersistGate } from 'redux-persist/integration/react';
-import { ToastProvider } from 'react-native-toast-notifications';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { useState } from 'react';
-import { LoggedContext } from './src/context';
+import "react-native-get-random-values";
+import Home from "./src/Screens/Home";
+import store from "./src/store/store";
+import MapScreen from "./src/Screens/MapScreen";
+import LoginScreen from "./src/Screens/LoginScreen";
+import CommentsScreen from "./src/Screens/CommentsScreen";
+import RegistrationScreen from "./src/Screens/RegistrationScreen";
+import { Text } from "react-native";
+import { Provider } from "react-redux";
+import { useState } from "react";
+import { useFonts } from "expo-font";
+import { PersistGate } from "redux-persist/integration/react";
+import { LoggedContext } from "./src/context";
+import { ToastProvider } from "react-native-toast-notifications";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const MainStack = createStackNavigator();
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [fontsLoaded] = useFonts({
-    'Roboto-Medium': require('./src/assets/fonts/Roboto-Medium.ttf'),
+    "Roboto-Medium": require("./src/assets/fonts/Roboto-Medium.ttf"),
     'Roboto': require('./src/assets/fonts/Roboto-Regular.ttf'),
     // prettier-ignore
   });
@@ -62,7 +62,7 @@ export default function App() {
                   <MainStack.Screen
                     name="Comments"
                     component={CommentsScreen}
-                    options={{ title: 'Коментарі', headerTitleAlign: 'center' }}
+                    options={{ title: "Коментарі", headerTitleAlign: "center" }}
                   />
                 )}
                 {isLoggedIn && (

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Connect World",
-    "slug": "Connect World",
+    "slug": "connect-world",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ishkov27.connectworld"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8f6248d3-1c28-408c-b1aa-6f579bc2b464"
+      }
     }
   }
 }
